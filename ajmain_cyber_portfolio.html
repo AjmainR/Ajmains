@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajmain | Cybersecurity & AI Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#050B14',
+                            card: '#0A1628',
+                            border: '#1E3A8A',
+                            neon: '#00FF66',
+                            cyan: '#00F0FF',
+                            purple: '#A855F7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050B14;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .mono-font {
+            font-family: 'Share Tech Mono', monospace;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050B14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00FF66;
+            border-radius: 4px;
+        }
+        /* Glow effects */
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.7), 0 0 20px rgba(0, 255, 102, 0.5);
+        }
+        .cyan-glow {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.25);
+            border-color: #00FF66;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-cyber-dark text-slate-100 relative selection:bg-cyber-neon selection:text-black">
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg bg-cyber-card border border-cyber-neon flex items-center justify-center text-cyber-neon font-bold text-xl group-hover:scale-110 transition-transform">
+                    A
+                </div>
+                <div>
+                    <span class="mono-font text-xl font-bold tracking-wider text-cyber-neon">AJMAIN<span class="text-cyber-cyan">.SEC</span></span>
+                    <span class="block text-xs text-slate-400 mono-font">STATUS: SECURE [ONLINE]</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 mono-font text-sm">
+                <a href="#about" class="hover:text-cyber-neon transition-colors">~/about</a>
+                <a href="#skills" class="hover:text-cyber-neon transition-colors">~/skills</a>
+                <a href="#journey" class="hover:text-cyber-neon transition-colors">~/journey</a>
+                <a href="#hobbies" class="hover:text-cyber-neon transition-colors">~/hobbies</a>
+                <a href="#contact" class="hover:text-cyber-neon transition-colors">~/connect</a>
+            </div>
+            <div>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-cyber-neon/10 border border-cyber-neon text-cyber-neon mono-font text-sm hover:bg-cyber-neon hover:text-black transition-all font-bold shadow-lg shadow-cyber-neon/20">
+                    &gt; DIRECT_CONNECT
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center px-4 pt-20">
+        <div class="max-w-5xl mx-auto text-center z-10">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-cyan/30 text-cyber-cyan mono-font text-xs mb-6 animate-pulse">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>CLASS 9 ETHICAL HACKER & AI RESEARCHER FROM BANGLADESH</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                HELLO, I AM <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-neon via-cyber-cyan to-cyber-purple neon-glow">AJMAIN</span>
+            </h1>
+            <div class="h-12 flex items-center justify-center mb-8">
+                <p id="typewriter" class="mono-font text-xl sm:text-2xl text-slate-300 border-r-2 border-cyber-neon pr-1 animate-ping-none"></p>
+            </div>
+            <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
+                Building a high-standard professional career in cyber security. Mastering ethical hacking, exploring artificial intelligence integrations, and engineering digital defense systems.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-xl bg-cyber-neon text-black font-bold mono-font hover:bg-cyber-cyan transition-all shadow-lg shadow-cyber-neon/30 flex items-center space-x-2">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>INITIATE CONTACT</span>
+                </a>
+                <a href="#about" class="px-8 py-4 rounded-xl bg-cyber-card border border-cyber-border text-slate-200 font-bold mono-font hover:border-cyber-cyan hover:text-cyber-cyan transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-user-secret"></i>
+                    <span>VIEW PROFILE</span>
+                </a>
+            </div>
+            
+            <!-- Quick Social Bar -->
+            <div class="mt-16 flex justify-center space-x-6 text-2xl">
+                <a href="https://www.facebook.com/profile.php?id=61585230707495" target="_blank" class="w-12 h-12 rounded-xl bg-cyber-card border border-cyber-border flex items-center justify-center text-slate-400 hover:text-cyber-neon hover:border-cyber-neon transition-all" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ajmain844/" target="_blank" class="w-12 h-12 rounded-xl bg-cyber-card border border-cyber-border flex items-center justify-center text-slate-400 hover:text-cyber-cyan hover:border-cyber-cyan transition-all" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/settings/profile" target="_blank" class="w-12 h-12 rounded-xl bg-cyber-card border border-cyber-border flex items-center justify-center text-slate-400 hover:text-cyber-purple hover:border-cyber-purple transition-all" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:ajmain18591859@gmail.com" class="w-12 h-12 rounded-xl bg-cyber-card border border-cyber-border flex items-center justify-center text-slate-400 hover:text-cyber-neon hover:border-cyber-neon transition-all" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="mono-font text-cyber-neon text-sm tracking-widest uppercase mb-2">// 01. WHO AM I</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">OPERATIVE PROFILE</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="bg-cyber-card/80 backdrop-blur border border-cyber-border rounded-2xl p-8 card-glow transition-all">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="mono-font text-xs text-slate-500 ml-auto">ajmain_bio.cfg</span>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        My name is <strong class="text-cyber-neon">Ajmain</strong>. I am a dedicated student currently in <strong class="text-cyber-cyan">Class 9</strong> living in beautiful <strong class="text-slate-100">Bangladesh</strong>. 
+                    </p>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        Despite my age, my passion burns deep for <strong class="text-cyber-neon">Cyber Security</strong> and <strong class="text-cyber-cyan">Ethical Hacking</strong>. My goal is to build a high-standard professional career and secure a brilliant future in this dynamic sector.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        I am also deeply fascinated by <strong class="text-cyber-purple">Artificial Intelligence</strong>, learning how to leverage AI tools responsibly to multiply productivity and enhance problem-solving capabilities.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all">
+                        <div class="text-3xl sm:text-4xl font-bold text-cyber-neon mono-font mb-2">Class 9</div>
+                        <div class="text-xs text-slate-400 mono-font">ACADEMIC STANDING</div>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all">
+                        <div class="text-3xl sm:text-4xl font-bold text-cyber-cyan mono-font mb-2">BD</div>
+                        <div class="text-xs text-slate-400 mono-font">BASED IN BANGLADESH</div>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all">
+                        <div class="text-3xl sm:text-4xl font-bold text-cyber-purple mono-font mb-2">AI+Sec</div>
+                        <div class="text-xs text-slate-400 mono-font">CORE FOCUS</div>
+                    </div>
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all">
+                        <div class="text-3xl sm:text-4xl font-bold text-yellow-400 mono-font mb-2">24/7</div>
+                        <div class="text-xs text-slate-400 mono-font">PASSION & DRIVE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-4 bg-cyber-card/30 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="mono-font text-cyber-neon text-sm tracking-widest uppercase mb-2">// 02. CAPABILITIES & ARSENAL</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">TECH STACK & EXPERTISE</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cyber Security -->
+                <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 card-glow transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-cyber-neon/10 border border-cyber-neon/40 flex items-center justify-center text-cyber-neon text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-100">Cyber Security & Hacking</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Studying penetration testing, vulnerability assessment, network defense, and ethical hacking methodologies to secure digital infrastructure.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-neon mono-font text-xs border border-cyber-neon/30">Ethical Hacking</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-neon mono-font text-xs border border-cyber-neon/30">Network Security</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-neon mono-font text-xs border border-cyber-neon/30">Linux</span>
+                    </div>
+                </div>
+                <!-- AI Integration -->
+                <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 card-glow transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-cyber-cyan/10 border border-cyber-cyan/40 flex items-center justify-center text-cyber-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-100">Artificial Intelligence</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Applying modern AI models and automated tools correctly to boost learning efficiency, script analysis, and digital problem solving.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-cyan mono-font text-xs border border-cyber-cyan/30">AI Prompting</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-cyan mono-font text-xs border border-cyber-cyan/30">Automation</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-cyan mono-font text-xs border border-cyber-cyan/30">Smart Analysis</span>
+                    </div>
+                </div>
+                <!-- Coding & Hobbies -->
+                <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 card-glow transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-cyber-purple/10 border border-cyber-purple/40 flex items-center justify-center text-cyber-purple text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-100">Coding & Development</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Writing scripts, building web pages, exploring music creation, and combining technical precision with creative hobbies.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-purple mono-font text-xs border border-cyber-purple/30">Python/JS</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-purple mono-font text-xs border border-cyber-purple/30">HTML/CSS</span>
+                        <span class="px-3 py-1 rounded-md bg-cyber-dark text-cyber-purple mono-font text-xs border border-cyber-purple/30">Music & Beats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="py-24 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="mono-font text-cyber-neon text-sm tracking-widest uppercase mb-2">// 03. TIMELINE & INTERESTS</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">MY JOURNEY & HOBBIES</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Timeline -->
+                <div class="space-y-6">
+                    <h4 class="mono-font text-cyber-cyan text-lg font-bold mb-4"><i class="fa-solid fa-timeline mr-2"></i>Milestones</h4>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 relative pl-10 card-glow">
+                        <div class="absolute left-4 top-6 w-3 h-3 rounded-full bg-cyber-neon animate-ping"></div>
+                        <div class="absolute left-4 top-6 w-3 h-3 rounded-full bg-cyber-neon"></div>
+                        <span class="mono-font text-xs text-cyber-neon">PRESENT / CLASS 9</span>
+                        <h5 class="text-lg font-bold text-slate-100 mt-1">Advanced Ethical Hacking & AI Study</h5>
+                        <p class="text-sm text-slate-400 mt-2">Mastering advanced networking concepts, penetration testing tools, and integrating AI workflows into daily security research.</p>
+                    </div>
+
+                    <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 relative pl-10 card-glow">
+                        <div class="absolute left-4 top-6 w-3 h-3 rounded-full bg-cyber-cyan"></div>
+                        <span class="mono-font text-xs text-cyber-cyan">FOUNDATION PHASE</span>
+                        <h5 class="text-lg font-bold text-slate-100 mt-1">Coding & Cybersecurity Discovery</h5>
+                        <p class="text-sm text-slate-400 mt-2">Started coding fundamentals, exploring how computer systems operate, and uncovering the fascinating world of cybersecurity.</p>
+                    </div>
+                </div>
+
+                <!-- Hobbies: Music & Audio Visualizer Simulation -->
+                <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 flex flex-col justify-between card-glow">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <h4 class="mono-font text-cyber-purple text-lg font-bold"><i class="fa-solid fa-headphones mr-2"></i>Audio / Music Frequency</h4>
+                            <span class="px-2.5 py-1 rounded bg-cyber-purple/20 text-cyber-purple mono-font text-xs">HOBBY #3</span>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            Beyond coding and hacking, I find profound inspiration in <strong class="text-cyber-purple">music</strong>. Rhythm and sound keep my mind sharp during complex debugging and security analysis sessions.
+                        </p>
+                    </div>
+
+                    <!-- Audio Visualizer Bars -->
+                    <div class="bg-cyber-dark/80 rounded-xl p-6 border border-cyber-border">
+                        <div class="flex items-end justify-between h-24 gap-1 sm:gap-2 px-2" id="visualizer">
+                            <!-- Generated via JS -->
+                        </div>
+                        <div class="text-center mt-4 mono-font text-xs text-slate-400">
+                            SYSTEM SOUNDTRACK: CYBER_BEATS.WAV [PLAYING]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 bg-cyber-card/30 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="mono-font text-cyber-neon text-sm tracking-widest uppercase mb-2">// 04. SECURE TRANSMISSION</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">DIRECT CONNECT WITH AJMAIN</h3>
+                <p class="text-slate-400 text-sm mt-2">Have a security question, project proposal, or just want to connect? Send a secure dispatch.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <a href="https://www.facebook.com/profile.php?id=61585230707495" target="_blank" class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all group">
+                    <div class="text-3xl text-cyber-neon mb-3 group-hover:scale-110 transition-transform"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="font-bold text-slate-200">Facebook</div>
+                    <div class="text-xs text-slate-400 mono-font mt-1">Ajmain Profile</div>
+                </a>
+                <a href="https://www.instagram.com/ajmain844/" target="_blank" class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all group">
+                    <div class="text-3xl text-cyber-cyan mb-3 group-hover:scale-110 transition-transform"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="font-bold text-slate-200">Instagram</div>
+                    <div class="text-xs text-slate-400 mono-font mt-1">@ajmain844</div>
+                </a>
+                <a href="mailto:ajmain18591859@gmail.com" class="bg-cyber-card border border-cyber-border rounded-xl p-6 text-center card-glow transition-all group">
+                    <div class="text-3xl text-cyber-purple mb-3 group-hover:scale-110 transition-transform"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="font-bold text-slate-200">Direct Email</div>
+                    <div class="text-xs text-slate-400 mono-font mt-1">ajmain18591859@gmail.com</div>
+                </a>
+            </div>
+
+            <!-- Simulated Secure Handshake Form -->
+            <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 card-glow">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block mono-font text-xs text-cyber-neon mb-2">&gt; SENDER_NAME</label>
+                            <input type="text" id="senderName" required placeholder="Enter your name..." class="w-full bg-cyber-dark border border-cyber-border rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-cyber-neon transition-colors mono-font text-sm">
+                        </div>
+                        <div>
+                            <label class="block mono-font text-xs text-cyber-neon mb-2">&gt; SENDER_EMAIL</label>
+                            <input type="email" id="senderEmail" required placeholder="Enter your email..." class="w-full bg-cyber-dark border border-cyber-border rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-cyber-neon transition-colors mono-font text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block mono-font text-xs text-cyber-neon mb-2">&gt; MESSAGE_CONTENT</label>
+                        <textarea id="senderMsg" rows="5" required placeholder="Type your secure message here..." class="w-full bg-cyber-dark border border-cyber-border rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-cyber-neon transition-colors mono-font text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-cyber-neon text-black font-bold mono-font hover:bg-cyber-cyan transition-all shadow-lg shadow-cyber-neon/30 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>TRANSMIT SECURE MESSAGE TO AJMAIN</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Notification Box (Replacing alert) -->
+    <div id="customModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-cyber-card border border-cyber-neon rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl shadow-cyber-neon/20 text-center">
+            <div class="w-16 h-16 rounded-full bg-cyber-neon/20 border border-cyber-neon flex items-center justify-center text-cyber-neon text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-shield-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-100 mb-2 mono-font" id="modalTitle">TRANSMISSION SUCCESSFUL</h3>
+            <p class="text-slate-300 text-sm mb-6" id="modalText">Your encrypted message has been successfully transmitted to Ajmain.</p>
+            <button onclick="closeModal()" class="px-6 py-2.5 rounded-lg bg-cyber-neon text-black font-bold mono-font text-sm hover:bg-cyber-cyan transition-all">
+                ACKNOWLEDGE
+            </button>
+        </div>
+    </div>
+
+    <footer class="py-12 border-t border-cyber-border/40 text-center text-slate-500 mono-font text-xs">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 AJMAIN. ALL RIGHTS RESERVED. SECURED & VERIFIED.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.facebook.com/profile.php?id=61585230707495" target="_blank" class="hover:text-cyber-neon transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/ajmain844/" target="_blank" class="hover:text-cyber-neon transition-colors">Instagram</a>
+                <a href="https://github.com/settings/profile" target="_blank" class="hover:text-cyber-neon transition-colors">GitHub</a>
+                <a href="mailto:ajmain18591859@gmail.com" class="hover:text-cyber-neon transition-colors">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Matrix Rain Background Animation
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()*&^%';
+        const alphabet = katakana + latin;
+
+        const fontSize = 16;
+        let columns = Math.floor(canvas.width / fontSize);
+        const rainDrops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(5, 11, 20, 0.08)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00FF66';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 30);
+
+        // Typewriter Effect
+        const words = [
+            "Ethical Hacker & Cybersecurity Learner",
+            "Class 9 Student from Bangladesh",
+            "AI Integration Enthusiast",
+            "Coder, Haker & Music Lover"
+        ];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typewriter').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        // Audio Visualizer Bars Generation
+        const visualizerContainer = document.getElementById('visualizer');
+        const barCount = 24;
+        const bars = [];
+
+        for (let b = 0; b < barCount; b++) {
+            const bar = document.createElement('div');
+            bar.className = 'w-full bg-cyber-purple/60 rounded-t transition-all duration-150';
+            bar.style.height = '20%';
+            visualizerContainer.appendChild(bar);
+            bars.push(bar);
+        }
+
+        setInterval(() => {
+            bars.forEach(bar => {
+                const randomHeight = Math.floor(Math.random() * 85) + 15;
+                bar.style.height = randomHeight + '%';
+            });
+        }, 180);
+
+        // Contact Form Submission Simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('senderName').value;
+            const email = document.getElementById('senderEmail').value;
+            
+            document.getElementById('modalTitle').innerText = "SECURE HANDSHAKE SUCCESSFUL";
+            document.getElementById('modalText').innerText = `Thank you ${name} (${email}). Your message has been securely dispatched to Ajmain!`;
+            document.getElementById('customModal').classList.remove('hidden');
+            this.reset();
+        });
+
+        function closeModal() {
+            document.getElementById('customModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
