@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJMAIN | Cyber Security Professional Journey</title>
+    <meta name="description" content="AJMAIN - Class 9 student from Bangladesh building a professional career in Cyber Security, Ethical Hacking & AI.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Mesh Background -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+    <canvas id="grid-canvas"></canvas>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <span class="brand-icon"><i class="fas fa-shield-halved"></i></span>
+                <span class="brand-name">AJMAIN</span>
+                <span class="brand-badge">CYBER</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#why-cyber" class="nav-item">Why Cyber</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#roadmap" class="nav-item">Roadmap</a>
+                <a href="#knowledge" class="nav-item">Knowledge</a>
+                <a href="#connect" class="nav-item">Connect</a>
+            </nav>
+            <button class="menu-btn" id="menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    Available for learning & collaboration
+                </div>
+                <h1 class="hero-heading">
+                    <span class="line">Securing the</span>
+                    <span class="line gradient-text">Digital Future</span>
+                </h1>
+                <p class="hero-lead">
+                    I’m <strong>AJMAIN</strong> — a Class 9 student from Bangladesh on a focused journey into 
+                    <em>Cyber Security</em>, <em>Ethical Hacking</em>, and intelligent use of <em>AI</em>.
+                </p>
+                <div class="hero-cta">
+                    <a href="#connect" class="btn-main">
+                        <span>Connect With Me</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn-ghost">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-box">
+                        <span class="meta-val" data-count="9">0</span>
+                        <span class="meta-label">Class</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="meta-val" data-count="4">0</span>
+                        <span class="meta-label">Focus Areas</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="meta-val" data-count="100">0</span>
+                        <span class="meta-label">% Commitment</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="orb-container">
+                    <div class="orb orb-core">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="orb-ring ring-a"></div>
+                    <div class="orb-ring ring-b"></div>
+                    <div class="orb-ring ring-c"></div>
+                    <div class="floating-icon icon-1"><i class="fas fa-bug"></i></div>
+                    <div class="floating-icon icon-2"><i class="fas fa-code"></i></div>
+                    <div class="floating-icon icon-3"><i class="fas fa-robot"></i></div>
+                    <div class="floating-icon icon-4"><i class="fas fa-network-wired"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">01 — About</span>
+                <h2 class="section-title">Who I Am</h2>
+                <p class="section-sub">A young mind committed to building a high-standard professional life in cyber security.</p>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-main card-glass">
+                    <div class="about-header">
+                        <div class="avatar-circle">
+                            <span>AJ</span>
+                        </div>
+                        <div>
+                            <h3>AJMAIN</h3>
+                            <p class="role">Aspiring Cyber Security Professional</p>
+                        </div>
+                    </div>
+                    <div class="about-body">
+                        <p>
+                            I am a <strong>Class 9 student</strong> living in <strong>Bangladesh</strong>. 
+                            From an early age I became fascinated by how digital systems work — and more importantly, 
+                            how they can be protected.
+                        </p>
+                        <p>
+                            My goal is clear: to build a <span class="text-accent">high-standard life</span> and a 
+                            <span class="text-accent">professional career</span> in Cyber Security and Ethical Hacking. 
+                            This field is not just interesting to me — it feels like the right path for my future.
+                        </p>
+                        <p>
+                            Alongside security skills, I actively learn how to use <strong>Artificial Intelligence</strong> 
+                            properly so that I can learn faster, research better, and create smarter solutions.
+                        </p>
+                    </div>
+                    <div class="about-chips">
+                        <span><i class="fas fa-map-marker-alt"></i> Bangladesh</span>
+                        <span><i class="fas fa-graduation-cap"></i> Class 9 Student</span>
+                        <span><i class="fas fa-bullseye"></i> Career Focused</span>
+                    </div>
+                </div>
+
+                <div class="about-side">
+                    <div class="hobby-card card-glass" data-tilt>
+                        <div class="hobby-icon"><i class="fas fa-terminal"></i></div>
+                        <h4>Coding</h4>
+                        <p>Writing scripts, automating tasks, and building small security tools.</p>
+                    </div>
+                    <div class="hobby-card card-glass" data-tilt>
+                        <div class="hobby-icon"><i class="fas fa-user-secret"></i></div>
+                        <h4>Ethical Hacking</h4>
+                        <p>Learning how systems can be tested and secured the right way.</p>
+                    </div>
+                    <div class="hobby-card card-glass" data-tilt>
+                        <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                        <h4>Music</h4>
+                        <p>Music keeps my mind sharp and creative while studying long hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CYBER ========== -->
+    <section id="why-cyber" class="section why-cyber">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">02 — Motivation</span>
+                <h2 class="section-title">Why Cyber Security?</h2>
+                <p class="section-sub">Understanding the importance of protecting the digital world.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card card-glass" data-tilt>
+                    <div class="why-num">01</div>
+                    <h3>Digital World is Growing</h3>
+                    <p>Almost everything — banking, education, communication, government — now depends on digital systems. Protecting them is essential.</p>
+                </div>
+                <div class="why-card card-glass" data-tilt>
+                    <div class="why-num">02</div>
+                    <h3>High Demand Career</h3>
+                    <p>Organizations worldwide need skilled cyber security professionals. It offers strong career growth and meaningful work.</p>
+                </div>
+                <div class="why-card card-glass" data-tilt>
+                    <div class="why-num">03</div>
+                    <h3>Ethical Responsibility</h3>
+                    <p>Ethical hacking helps find weaknesses before attackers do. I want to use knowledge for good and make systems safer.</p>
+                </div>
+                <div class="why-card card-glass" data-tilt>
+                    <div class="why-num">04</div>
+                    <h3>Continuous Learning</h3>
+                    <p>Technology changes fast. Cyber security keeps the mind active, curious, and always learning — which I love.</p>
+                </div>
+            </div>
+
+            <div class="quote-box card-glass">
+                <i class="fas fa-quote-left"></i>
+                <blockquote>
+                    “My dream is not only to get a job, but to become a professional who can truly protect people and systems in the digital age.”
+                </blockquote>
+                <cite>— AJMAIN</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">03 — Skills</span>
+                <h2 class="section-title">What I’m Building</h2>
+                <p class="section-sub">Core areas I am actively learning and practicing every day.</p>
+            </div>
+
+            <div class="skills-layout">
+                <div class="skill-panel card-glass">
+                    <div class="skill-top">
+                        <div class="skill-icon-wrap"><i class="fas fa-shield-virus"></i></div>
+                        <div>
+                            <h3>Cyber Security Fundamentals</h3>
+                            <span class="level-tag">Learning</span>
+                        </div>
+                    </div>
+                    <p>Understanding threats, vulnerabilities, network security basics, and defensive strategies to protect systems and data.</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" data-width="72"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Network Security</span>
+                        <span>Threat Awareness</span>
+                        <span>CIA Triad</span>
+                    </div>
+                </div>
+
+                <div class="skill-panel card-glass">
+                    <div class="skill-top">
+                        <div class="skill-icon-wrap"><i class="fas fa-bug"></i></div>
+                        <div>
+                            <h3>Ethical Hacking</h3>
+                            <span class="level-tag">Learning</span>
+                        </div>
+                    </div>
+                    <p>Learning how to think like an attacker so I can help defend better — always with ethics and responsibility.</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" data-width="65"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Penetration Testing Basics</span>
+                        <span>Vulnerability Mindset</span>
+                    </div>
+                </div>
+
+                <div class="skill-panel card-glass">
+                    <div class="skill-top">
+                        <div class="skill-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                        <div>
+                            <h3>Coding & Scripting</h3>
+                            <span class="level-tag">Growing</span>
+                        </div>
+                    </div>
+                    <p>Building logic, writing small tools, and automating tasks that support security research and learning.</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Problem Solving</span>
+                        <span>Automation</span>
+                        <span>Logic Building</span>
+                    </div>
+                </div>
+
+                <div class="skill-panel card-glass">
+                    <div class="skill-top">
+                        <div class="skill-icon-wrap"><i class="fas fa-robot"></i></div>
+                        <div>
+                            <h3>AI for Learning</h3>
+                            <span class="level-tag">Proficient</span>
+                        </div>
+                    </div>
+                    <p>Using AI tools effectively to accelerate research, understand complex topics faster, and improve productivity.</p>
+                    <div class="progress-track">
+                        <div class="progress-fill" data-width="82"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Smart Research</span>
+                        <span>Productivity</span>
+                        <span>AI Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ROADMAP ========== -->
+    <section id="roadmap" class="section roadmap">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">04 — Roadmap</span>
+                <h2 class="section-title">My Learning Path</h2>
+                <p class="section-sub">A clear step-by-step journey toward a professional cyber security career.</p>
+            </div>
+
+            <div class="roadmap-track">
+                <div class="road-item">
+                    <div class="road-marker">
+                        <span>1</span>
+                    </div>
+                    <div class="road-content card-glass">
+                        <span class="road-phase">Foundation</span>
+                        <h3>Core Concepts</h3>
+                        <p>Networking basics, operating systems, how the internet works, and fundamental security principles (Confidentiality, Integrity, Availability).</p>
+                        <ul>
+                            <li>TCP/IP & common protocols</li>
+                            <li>Windows & Linux basics</li>
+                            <li>Security mindset</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="road-item">
+                    <div class="road-marker">
+                        <span>2</span>
+                    </div>
+                    <div class="road-content card-glass">
+                        <span class="road-phase">Present Focus</span>
+                        <h3>Hands-on Learning</h3>
+                        <p>Practicing ethical techniques, learning common tools in a safe environment, and strengthening coding skills.</p>
+                        <ul>
+                            <li>Ethical hacking fundamentals</li>
+                            <li>Scripting & automation</li>
+                            <li>AI-assisted research</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="road-item">
+                    <div class="road-marker">
+                        <span>3</span>
+                    </div>
+                    <div class="road-content card-glass">
+                        <span class="road-phase">Next Level</span>
+                        <h3>Specialization</h3>
+                        <p>Moving deeper into areas such as web security, network defense, or digital forensics while building real projects.</p>
+                        <ul>
+                            <li>Web application security</li>
+                            <li>Practical labs & CTFs</li>
+                            <li>Portfolio projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="road-item">
+                    <div class="road-marker">
+                        <span>4</span>
+                    </div>
+                    <div class="road-content card-glass">
+                        <span class="road-phase">Long-term Goal</span>
+                        <h3>Professional Career</h3>
+                        <p>Becoming a skilled cyber security professional who contributes to a safer digital world and lives a high-standard life.</p>
+                        <ul>
+                            <li>Industry certifications path</li>
+                            <li>Real-world experience</li>
+                            <li>Continuous growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== KNOWLEDGE ========== -->
+    <section id="knowledge" class="section knowledge">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">05 — Knowledge</span>
+                <h2 class="section-title">Cyber Security Basics</h2>
+                <p class="section-sub">Simple explanations of important concepts I’m learning.</p>
+            </div>
+
+            <div class="knowledge-grid">
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>CIA Triad</h3>
+                    <p><strong>Confidentiality</strong> — keep data private.<br>
+                       <strong>Integrity</strong> — keep data accurate.<br>
+                       <strong>Availability</strong> — keep systems working when needed.</p>
+                </div>
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Ethical Hacking</h3>
+                    <p>Testing systems with permission to find weaknesses so they can be fixed before real attackers find them. Always legal and responsible.</p>
+                </div>
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-virus"></i></div>
+                    <h3>Common Threats</h3>
+                    <p>Malware, phishing, ransomware, social engineering, and weak passwords are among the most common ways systems get compromised.</p>
+                </div>
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Defense Basics</h3>
+                    <p>Strong passwords, multi-factor authentication, regular updates, firewalls, and security awareness training form the first line of defense.</p>
+                </div>
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Network Security</h3>
+                    <p>Protecting data as it travels across networks. Understanding routers, switches, firewalls, and how traffic can be monitored and filtered.</p>
+                </div>
+                <div class="know-card card-glass">
+                    <div class="know-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI in Security</h3>
+                    <p>AI helps detect unusual behavior faster, analyze large amounts of logs, and support security analysts — when used correctly and ethically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONNECT ========== -->
+    <section id="connect" class="section connect">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">06 — Connect</span>
+                <h2 class="section-title">Let’s Connect</h2>
+                <p class="section-sub">Whether you want to collaborate, share knowledge, or just say hello — I’m open.</p>
+            </div>
+
+            <div class="connect-layout">
+                <div class="social-grid">
+                    <a href="mailto:ajmain18591859@gmail.com" class="social-card card-glass" target="_blank">
+                        <div class="social-icon email"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ajmain18591859@gmail.com</p>
+                        </div>
+                        <i class="fas fa-external-link-alt arrow"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61585230707495" class="social-card card-glass" target="_blank" rel="noopener">
+                        <div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p>Connect on Facebook</p>
+                        </div>
+                        <i class="fas fa-external-link-alt arrow"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ajmain844/" class="social-card card-glass" target="_blank" rel="noopener">
+                        <div class="social-icon instagram"><i class="fab fa-instagram"></i></div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@ajmain844</p>
+                        </div>
+                        <i class="fas fa-external-link-alt arrow"></i>
+                    </a>
+                    <a href="https://github.com/settings/profile" class="social-card card-glass" target="_blank" rel="noopener">
+                        <div class="social-icon github"><i class="fab fa-github"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>View my code & projects</p>
+                        </div>
+                        <i class="fas fa-external-link-alt arrow"></i>
+                    </a>
+                </div>
+
+                <div class="contact-panel card-glass">
+                    <div class="form-head">
+                        <h3><i class="fas fa-paper-plane"></i> Send a Direct Message</h3>
+                        <p>Fill the form and your email client will open with the message ready.</p>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can I help?" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-main full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="brand-icon"><i class="fas fa-shield-halved"></i></span>
+                    <span>AJMAIN</span>
+                </div>
+                <p class="footer-tag">Cyber Security • Ethical Hacking • AI Learner • Future Builder</p>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/profile.php?id=61585230707495" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ajmain844/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/settings/profile" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ajmain18591859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copy">© 2026 AJMAIN. Designed for a professional cyber security journey.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
